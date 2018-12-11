@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "npm:update": "./node_modules/.bin/npm-check-updates -a -u && rm -rf node_modules yarn.lock && yarn",
     "start": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
     "prettier": "./node_modules/.bin/prettier --write ./src/**/*.{ts,json}",
     "tslint": "./node_modules/.bin/tslint --project tsconfig.json --format stylish",
     "tslint:fix": "./node_modules/.bin/tslint --project tsconfig.json --fix",
-    "pre-commit": "yarn tslint && yarn tslint:fix && yarn prettier",
+    "pre-commit": "yarn tslint:fix && yarn prettier",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,7 +34,7 @@
     "@types/koa-router": "^7.0.35",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
-    "nodemon": "^1.18.7",
+    "nodemon": "^1.18.8",
     "npm-check-updates": "^2.15.0",
     "prettier": "^1.15.3",
     "ts-node": "^7.0.1",
@@ -43,7 +44,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
