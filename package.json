@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
+    "prettier": "./node_modules/.bin/prettier --write ./src/**/*.{ts,tsx}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,12 +21,15 @@
   "homepage": "https://github.com/MVolodya/simple-api#readme",
   "dependencies": {
     "koa": "^2.6.2",
+    "koa-morgan": "^1.0.1",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.47",
+    "@types/koa-morgan": "^1.0.4",
     "@types/koa-router": "^7.0.35",
     "nodemon": "^1.18.7",
+    "prettier": "^1.15.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   }

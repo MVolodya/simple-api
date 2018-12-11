@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "target": "es2017",
-      "noImplicitAny": true,
-      "outDir": "./dist",
-      "sourceMap": true
+    "module": "commonjs",
+    "target": "es2017",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
   },
-  "include": [
-      "./src/**/*"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
