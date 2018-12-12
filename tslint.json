@@ -2,7 +2,91 @@
   "defaultSeverity": "error",
   "extends": ["tslint:recommended", "tslint-config-prettier"],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "no-duplicate-variable": true,
+    "indent": [true, "spaces"],
+    "prefer-const": true,
+    "no-conditional-assignment": true,
+    "no-shadowed-variable": true,
+    "no-unused-expression": true,
+    "no-var-keyword": true,
+    "switch-default": true,
+    "no-trailing-whitespace": true,
+    "arrow-return-shorthand": true,
+    "no-string-literal": true,
+    "prefer-for-of": true,
+    "eofline": true,
+    "max-classes-per-file": [true, 1],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "object-literal-shorthand": true,
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "quotemark": [true, "double", "avoid-escape"],
+    "semicolon": true,
+    "prefer-template": true,
+    "space-before-function-paren": [true, "never"],
+    "object-literal-key-quotes": [true, "consistent"],
+    "only-arrow-functions": [
+      true,
+      "allow-declarations",
+      "allow-named-functions"
+    ],
+    "forin": true,
+    "no-unsafe-finally": true,
+    "use-isnan": true,
+    "no-default-export": true,
+    "no-duplicate-imports": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-parameter-reassignment": true,
+    "one-line": [
+      true,
+      "check-catch",
+      "check-else",
+      "check-finally",
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-type",
+      "check-preblock"
+    ],
+    "curly": [true, "ignore-same-line"],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "max-line-length": [
+      true,
+      {
+        "limit": 120,
+        "ignore-pattern": "^import |^export |class [a-zA-Z]+ implements |class [a-zA-Z]+ extends|//|https?://"
+      }
+    ]
+  },
   "rulesDirectory": [],
   "linterOptions": {
     "exclude": ["node_modules/**/*.ts", "dist/**/*.ts"]
